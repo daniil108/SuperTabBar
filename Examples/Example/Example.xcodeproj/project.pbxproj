@@ -12,6 +12,7 @@
 		700BE7CB2B98FD4000C8DDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BE7CA2B98FD4000C8DDAD /* Assets.xcassets */; };
 		700BE7CF2B98FD4000C8DDAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BE7CE2B98FD4000C8DDAD /* Preview Assets.xcassets */; };
 		700BE7D92B98FDF000C8DDAD /* SuperTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BE7D82B98FDF000C8DDAD /* SuperTabBar.swift */; };
+		700BE7DC2B9900F500C8DDAD /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BE7DB2B9900F500C8DDAD /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		700BE7CC2B98FD4000C8DDAD /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		700BE7CE2B98FD4000C8DDAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		700BE7D82B98FDF000C8DDAD /* SuperTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTabBar.swift; sourceTree = "<group>"; };
+		700BE7DB2B9900F500C8DDAD /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		700BE7D62B98FDD000C8DDAD /* SuperTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				700BE7DA2B9900EC00C8DDAD /* Tab */,
 				700BE7D82B98FDF000C8DDAD /* SuperTabBar.swift */,
 			);
 			path = SuperTabBar;
@@ -95,6 +98,14 @@
 			);
 			name = Sources;
 			path = ../../Sources;
+			sourceTree = "<group>";
+		};
+		700BE7DA2B9900EC00C8DDAD /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				700BE7DB2B9900F500C8DDAD /* Tab.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				700BE7C92B98FD3E00C8DDAD /* ContentView.swift in Sources */,
 				700BE7C72B98FD3E00C8DDAD /* ExampleApp.swift in Sources */,
 				700BE7D92B98FDF000C8DDAD /* SuperTabBar.swift in Sources */,
+				700BE7DC2B9900F500C8DDAD /* Tab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

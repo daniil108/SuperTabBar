@@ -7,7 +7,15 @@
 
 import SwiftUI
 
-public struct SuperTabBar: View {
+public struct SuperTabBar<TabItem: Tab>: View {
+    
+    @Binding private var selection: TabItem
+    @State private var items: [TabItem]
+    
+    init(selection: Binding<TabItem>) {
+        self._selection = selection
+        self._items = .init(initialValue: .init())
+    }
     
     public var body: some View {
         VStack {
