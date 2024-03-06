@@ -1,0 +1,10 @@
+.DS_Store
+.swiftpm
+
+xcuserdata/
+
+Package.resolved
+Pods/
+Podfile.lock
+*.xcuserstate
+xcuserdata
