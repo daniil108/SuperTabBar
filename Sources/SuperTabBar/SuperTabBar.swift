@@ -7,24 +7,49 @@
 
 import SwiftUI
 
-public struct SuperTabBar<TabItem: SuperTab>: View {
+class TabSelection<Item: SuperTab>: ObservableObject {
+    @Binding var selection: Item
     
-    @Binding private var selection: TabItem
-    @State private var items: [TabItem]
-    
-    init(selection: Binding<TabItem>) {
+    init(selection: Binding<Item>) {
         self._selection = selection
-        self._items = .init(initialValue: .init())
+    }
+}
+
+
+public struct SuperTabBar<Item: SuperTab>: View {
+    
+    private let items: [Item]
+    private let selection: TabSelection<Item>
+    
+    init(items: [Item],
+         selection: Binding<Item>) {
+        self.items = items
+        self.selection = .init(selection: selection)
+    }
+    
+    private var tabItems: some View {
+        HStack {
+            ForEach(self.items, id: \.self) { item in
+                Text(item.title)
+                    .onTapGesture {
+                        self.selection.selection = item
+                        self.selection.objectWillChange.send()
+                    }
+            }
+            .frame(maxWidth: .infinity)
+        }
     }
     
     public var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            self.selection.selection.view
+            GeometryReader { geometry in
+                VStack {
+                    Spacer()
+                    tabItems
+                }
+            }
         }
-        .padding()
     }
     
 }

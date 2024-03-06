@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-enum Tab {
+enum Tab: Int, CaseIterable {
     
-    case cards
+    case cards = 0
     case learn
     case results
     case menu
@@ -61,6 +61,20 @@ extension Tab: SuperTab {
         false
     }
     
+    var view: AnyView {
+        switch self {
+        case .cards:
+            return AnyView(Text("Cards"))
+        case .learn:
+            return AnyView(Text("Learn"))
+        case .results:
+            return AnyView(Text("Results"))
+        case .menu:
+            return AnyView(Text("Menu"))
+        }
+    }
+    
+    
 }
 
 struct ContentView: View {
@@ -68,8 +82,7 @@ struct ContentView: View {
     @State private var selectedTab = Tab.cards
     
     var body: some View {
-        SuperTabBar(selection: $selectedTab)
-        Text("")
+        SuperTabBar(items: Tab.allCases, selection: $selectedTab)
     }
 }
 

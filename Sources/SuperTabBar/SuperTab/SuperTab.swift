@@ -5,7 +5,7 @@
 //  Created by Daniil Sentsov on 06/03/2024.
 //
 
-import Foundation
+import SwiftUI
 
 public protocol SuperTab: Hashable {
 
@@ -16,5 +16,7 @@ public protocol SuperTab: Hashable {
     var title: String { get }
     
     var displayTitleSelected: Bool { get }
+    
+    var view: AnyView { get }
     
 }
