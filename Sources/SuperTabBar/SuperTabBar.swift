@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct SuperTabBar<TabItem: Tab>: View {
+public struct SuperTabBar<TabItem: SuperTab>: View {
     
     @Binding private var selection: TabItem
     @State private var items: [TabItem]
