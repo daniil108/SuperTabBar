@@ -19,4 +19,15 @@ public protocol SuperTab: Hashable {
     
     var view: AnyView { get }
     
+    var customTabView: AnyView? { get }
+    
+    var customSelectedTabView: AnyView? { get }
+    
+}
+
+public extension SuperTab {
+    
+    var customTabView: AnyView? { nil }
+    var customSelectedTabView: AnyView? { nil }
+    
 }

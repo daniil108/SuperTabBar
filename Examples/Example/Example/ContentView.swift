@@ -74,6 +74,24 @@ extension Tab: SuperTab {
         }
     }
     
+    var customTabView: AnyView? {
+        AnyView(
+            VStack {
+                Image(icon)
+            }
+                .frame(maxWidth: .infinity, maxHeight: 58)
+                .background(Color.purple)
+        )
+    }
+    
+    var customSelectedTabView: AnyView? {
+        AnyView(
+            VStack {
+                Image(selectedIcon)
+                Text(title)
+            }
+        )
+    }
     
 }
 

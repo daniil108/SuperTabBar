@@ -28,15 +28,28 @@ public struct SuperTabBar<Item: SuperTab>: View {
     }
     
     private var tabItems: some View {
-        HStack {
+        HStack(spacing: 0) {
             ForEach(self.items, id: \.self) { item in
-                VStack {
-                    Image(item.selectedIcon)
-                    Text(item.title)
-                        .onTapGesture {
-                            self.selection.selection = item
-                            self.selection.objectWillChange.send()
-                        }
+                if let customTabView = item.customTabView,
+                   let customSelectedTabView = item.customSelectedTabView {
+                    if self.selection.selection == item {
+                        customSelectedTabView
+                    } else {
+                        customTabView
+                            .onTapGesture {
+                                self.selection.selection = item
+                                self.selection.objectWillChange.send()
+                            }
+                    }
+                } else {
+                    VStack {
+                        Image(self.selection.selection == item ? item.selectedIcon : item.icon)
+                        Text(item.title)
+                    }
+                    .onTapGesture {
+                        self.selection.selection = item
+                        self.selection.objectWillChange.send()
+                    }
                 }
             }
             .frame(maxWidth: .infinity)
