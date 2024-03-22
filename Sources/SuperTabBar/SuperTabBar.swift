@@ -30,11 +30,14 @@ public struct SuperTabBar<Item: SuperTab>: View {
     private var tabItems: some View {
         HStack {
             ForEach(self.items, id: \.self) { item in
-                Text(item.title)
-                    .onTapGesture {
-                        self.selection.selection = item
-                        self.selection.objectWillChange.send()
-                    }
+                VStack {
+                    Image(item.selectedIcon)
+                    Text(item.title)
+                        .onTapGesture {
+                            self.selection.selection = item
+                            self.selection.objectWillChange.send()
+                        }
+                }
             }
             .frame(maxWidth: .infinity)
         }
