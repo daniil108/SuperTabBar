@@ -10,7 +10,6 @@ import SwiftUI
 struct ExampleList: View {
     
     var body: some View {
-        
         NavigationStack {
             List {
                 NavigationLink {
@@ -24,7 +23,7 @@ struct ExampleList: View {
                     Text("Learn view")
                 }
             }
-            .navigationTitle("Demo")
+            .navigationTitle("Super TabBar Demo")
         }
     }
     
