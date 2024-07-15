@@ -17,8 +17,6 @@ public protocol SuperTab: Hashable {
     
     var displayTitleSelected: Bool { get }
     
-    var view: AnyView { get }
-    
     var customTabView: AnyView? { get }
     
     var customSelectedTabView: AnyView? { get }

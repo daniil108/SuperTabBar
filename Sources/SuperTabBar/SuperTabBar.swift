@@ -16,15 +16,17 @@ class TabSelection<Item: SuperTab>: ObservableObject {
 }
 
 
-public struct SuperTabBar<Item: SuperTab>: View {
+public struct SuperTabBar<Item: SuperTab, Content: View>: View {
     
-    private let items: [Item]
     private let selection: TabSelection<Item>
+    private let content: Content
+    @State private var items: [Item]
     
-    init(items: [Item],
-         selection: Binding<Item>) {
-        self.items = items
+    init(selection: Binding<Item>,
+         @ViewBuilder content: () -> Content) {
         self.selection = .init(selection: selection)
+        self.content = content()
+        self._items = .init(initialValue: .init())
     }
     
     private var tabItems: some View {
@@ -58,13 +60,18 @@ public struct SuperTabBar<Item: SuperTab>: View {
     
     public var body: some View {
         ZStack {
-            self.selection.selection.view
+            self.content
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .environmentObject(self.selection)
             GeometryReader { geometry in
                 VStack {
                     Spacer()
                     tabItems
                 }
             }
+        }
+        .onPreferenceChange(TabBarPreferenceKey.self) { value in
+            self.items = value
         }
     }
     

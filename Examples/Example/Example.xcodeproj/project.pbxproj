@@ -13,6 +13,9 @@
 		700BE7CF2B98FD4000C8DDAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BE7CE2B98FD4000C8DDAD /* Preview Assets.xcassets */; };
 		700BE7D92B98FDF000C8DDAD /* SuperTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BE7D82B98FDF000C8DDAD /* SuperTabBar.swift */; };
 		700BE7DC2B9900F500C8DDAD /* SuperTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BE7DB2B9900F500C8DDAD /* SuperTab.swift */; };
+		70B66A2E2C45A4B200148C03 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A2D2C45A4B200148C03 /* View+Extension.swift */; };
+		70B66A302C45A4F400148C03 /* TabBarViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A2F2C45A4F400148C03 /* TabBarViewModifier.swift */; };
+		70B66A322C45A50D00148C03 /* TabBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A312C45A50D00148C03 /* TabBarPreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		700BE7CE2B98FD4000C8DDAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		700BE7D82B98FDF000C8DDAD /* SuperTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTabBar.swift; sourceTree = "<group>"; };
 		700BE7DB2B9900F500C8DDAD /* SuperTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTab.swift; sourceTree = "<group>"; };
+		70B66A2D2C45A4B200148C03 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		70B66A2F2C45A4F400148C03 /* TabBarViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModifier.swift; sourceTree = "<group>"; };
+		70B66A312C45A50D00148C03 /* TabBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		700BE7D72B98FDD000C8DDAD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				70B66A2C2C45A49E00148C03 /* Extentions */,
 				700BE7D62B98FDD000C8DDAD /* SuperTabBar */,
 			);
 			name = Sources;
@@ -104,8 +111,18 @@
 			isa = PBXGroup;
 			children = (
 				700BE7DB2B9900F500C8DDAD /* SuperTab.swift */,
+				70B66A2F2C45A4F400148C03 /* TabBarViewModifier.swift */,
+				70B66A312C45A50D00148C03 /* TabBarPreferenceKey.swift */,
 			);
 			path = SuperTab;
+			sourceTree = "<group>";
+		};
+		70B66A2C2C45A49E00148C03 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				70B66A2D2C45A4B200148C03 /* View+Extension.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				700BE7C92B98FD3E00C8DDAD /* ContentView.swift in Sources */,
+				70B66A302C45A4F400148C03 /* TabBarViewModifier.swift in Sources */,
 				700BE7C72B98FD3E00C8DDAD /* ExampleApp.swift in Sources */,
+				70B66A322C45A50D00148C03 /* TabBarPreferenceKey.swift in Sources */,
+				70B66A2E2C45A4B200148C03 /* View+Extension.swift in Sources */,
 				700BE7D92B98FDF000C8DDAD /* SuperTabBar.swift in Sources */,
 				700BE7DC2B9900F500C8DDAD /* SuperTab.swift in Sources */,
 			);

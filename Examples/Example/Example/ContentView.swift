@@ -61,19 +61,6 @@ extension Tab: SuperTab {
         false
     }
     
-    var view: AnyView {
-        switch self {
-        case .cards:
-            return AnyView(Text("Cards"))
-        case .learn:
-            return AnyView(Text("Learn"))
-        case .results:
-            return AnyView(Text("Results"))
-        case .menu:
-            return AnyView(Text("Menu"))
-        }
-    }
-    
     var customTabView: AnyView? {
         AnyView(
             VStack {
@@ -100,7 +87,16 @@ struct ContentView: View {
     @State private var selectedTab = Tab.cards
     
     var body: some View {
-        SuperTabBar(items: Tab.allCases, selection: $selectedTab)
+        SuperTabBar(selection: $selectedTab) {
+            Text("Cards")
+                .tabItem(for: Tab.cards)
+            Text("Learn")
+                .tabItem(for: Tab.learn)
+            Text("Results")
+                .tabItem(for: Tab.results)
+            Text("Menu")
+                .tabItem(for: Tab.menu)
+        }
     }
 }
 
