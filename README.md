@@ -4,6 +4,6 @@ Highly customizable SwiftUI TabBar, Which allows you to create both simple tabba
 
 ## Installation
 
-```sh
-npm install @daniil108/SuperTabBa
-```
+### SPM
+
+Add https://github.com/daniil108/SuperTabBar using Package Dependecies.
