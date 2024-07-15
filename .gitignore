@@ -5,6 +5,7 @@ xcuserdata/
 
 Package.resolved
 Pods/
+.build/
 Podfile.lock
 *.xcuserstate
 xcuserdata
