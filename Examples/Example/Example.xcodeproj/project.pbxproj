@@ -21,6 +21,9 @@
 		70B66A3A2C45B1D500148C03 /* TabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A392C45B1D500148C03 /* TabBarStyle.swift */; };
 		70B66A3C2C45B1F500148C03 /* DefaultTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A3B2C45B1F500148C03 /* DefaultTabBarStyle.swift */; };
 		70B66A3F2C45B2AE00148C03 /* LearnTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A3E2C45B2AE00148C03 /* LearnTab.swift */; };
+		70B66A422C45B55C00148C03 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A412C45B55C00148C03 /* DefaultView.swift */; };
+		70B66A442C45B6AF00148C03 /* ExampleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A432C45B6AF00148C03 /* ExampleList.swift */; };
+		70B66A462C45B76100148C03 /* DefaultTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A452C45B76000148C03 /* DefaultTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		70B66A392C45B1D500148C03 /* TabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStyle.swift; sourceTree = "<group>"; };
 		70B66A3B2C45B1F500148C03 /* DefaultTabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabBarStyle.swift; sourceTree = "<group>"; };
 		70B66A3E2C45B2AE00148C03 /* LearnTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTab.swift; sourceTree = "<group>"; };
+		70B66A412C45B55C00148C03 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		70B66A432C45B6AF00148C03 /* ExampleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleList.swift; sourceTree = "<group>"; };
+		70B66A452C45B76000148C03 /* DefaultTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +79,10 @@
 		700BE7C52B98FD3E00C8DDAD /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				70B66A402C45B54000148C03 /* DefaultExample */,
 				70B66A3D2C45B25F00148C03 /* LearnExample */,
 				700BE7C62B98FD3E00C8DDAD /* ExampleApp.swift */,
+				70B66A432C45B6AF00148C03 /* ExampleList.swift */,
 				700BE7CA2B98FD4000C8DDAD /* Assets.xcassets */,
 				700BE7CC2B98FD4000C8DDAD /* Example.entitlements */,
 				700BE7CD2B98FD4000C8DDAD /* Preview Content */,
@@ -146,6 +154,15 @@
 				70B66A3E2C45B2AE00148C03 /* LearnTab.swift */,
 			);
 			path = LearnExample;
+			sourceTree = "<group>";
+		};
+		70B66A402C45B54000148C03 /* DefaultExample */ = {
+			isa = PBXGroup;
+			children = (
+				70B66A412C45B55C00148C03 /* DefaultView.swift */,
+				70B66A452C45B76000148C03 /* DefaultTab.swift */,
+			);
+			path = DefaultExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,12 +240,15 @@
 				700BE7C92B98FD3E00C8DDAD /* LearnView.swift in Sources */,
 				70B66A302C45A4F400148C03 /* TabBarViewModifier.swift in Sources */,
 				700BE7C72B98FD3E00C8DDAD /* ExampleApp.swift in Sources */,
+				70B66A462C45B76100148C03 /* DefaultTab.swift in Sources */,
 				70B66A3A2C45B1D500148C03 /* TabBarStyle.swift in Sources */,
 				70B66A322C45A50D00148C03 /* TabBarPreferenceKey.swift in Sources */,
 				70B66A2E2C45A4B200148C03 /* View+Extension.swift in Sources */,
 				70B66A3C2C45B1F500148C03 /* DefaultTabBarStyle.swift in Sources */,
 				700BE7D92B98FDF000C8DDAD /* SuperTabBar.swift in Sources */,
 				70B66A3F2C45B2AE00148C03 /* LearnTab.swift in Sources */,
+				70B66A422C45B55C00148C03 /* DefaultView.swift in Sources */,
+				70B66A442C45B6AF00148C03 /* ExampleList.swift in Sources */,
 				700BE7DC2B9900F500C8DDAD /* SuperTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
