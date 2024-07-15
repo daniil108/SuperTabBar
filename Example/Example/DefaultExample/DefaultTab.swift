@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SuperTabBar
 
 enum DefaultTab: Int, CaseIterable {
     

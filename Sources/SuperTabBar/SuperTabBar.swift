@@ -23,8 +23,8 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
     private(set) var tabBarStyle: AnyTabBarStyle
     @State private var items: [Item]
     
-    init(selection: Binding<Item>,
-         @ViewBuilder content: () -> Content) {
+    public init(selection: Binding<Item>,
+                @ViewBuilder content: () -> Content) {
         self.selection = .init(selection: selection)
         self.content = content()
         self.tabBarStyle = .init(barStyle: DefaultTabBarStyle())
