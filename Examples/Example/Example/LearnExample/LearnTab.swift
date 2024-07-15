@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  LearnTab.swift
 //  Example
 //
-//  Created by Daniil Sentsov on 06/03/2024.
+//  Created by Daniil Sentsov on 15/07/2024.
 //
 
 import SwiftUI
 
-enum Tab: Int, CaseIterable {
+enum LearnTab: Int, CaseIterable {
     
     case cards = 0
     case learn
@@ -16,7 +16,7 @@ enum Tab: Int, CaseIterable {
     
 }
 
-extension Tab: SuperTab {
+extension LearnTab: SuperTab {
     
     var icon: String {
         switch self {
@@ -66,40 +66,37 @@ extension Tab: SuperTab {
             VStack {
                 Image(icon)
             }
-                .frame(maxWidth: .infinity, maxHeight: 58)
-                .background(Color.purple)
+            .frame(maxWidth: .infinity)
         )
     }
     
     var customSelectedTabView: AnyView? {
         AnyView(
-            VStack {
-                Image(selectedIcon)
-                Text(title)
+            ZStack {
+                GeometryReader { geometry in
+                    if self == .cards || self == .menu {
+                        Rectangle()
+                            .path(in: CGRect(x: self == .cards ? 0 : geometry.size.width / 2,
+                                             y: 0,
+                                             width: geometry.size.width / 2,
+                                             height: 400))
+                            .fill(.white)
+                    }
+                    RoundedRectangle(cornerRadius: 20)
+                        .path(in: CGRect(x: 0,
+                                         y: 0,
+                                         width: geometry.size.width,
+                                         height: 400))
+                        .fill(.white)
+                        .foregroundStyle(.background)
+                }
+                VStack {
+                    Image(selectedIcon)
+                    Text(title)
+                        .foregroundStyle(.purple)
+                }
             }
         )
     }
     
-}
-
-struct ContentView: View {
-    
-    @State private var selectedTab = Tab.cards
-    
-    var body: some View {
-        SuperTabBar(selection: $selectedTab) {
-            Text("Cards")
-                .tabItem(for: Tab.cards)
-            Text("Learn")
-                .tabItem(for: Tab.learn)
-            Text("Results")
-                .tabItem(for: Tab.results)
-            Text("Menu")
-                .tabItem(for: Tab.menu)
-        }
-    }
-}
-
-#Preview {
-    ContentView()
 }

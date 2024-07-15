@@ -20,12 +20,14 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
     
     private let selection: TabSelection<Item>
     private let content: Content
+    private(set) var tabBarStyle: AnyTabBarStyle
     @State private var items: [Item]
     
     init(selection: Binding<Item>,
          @ViewBuilder content: () -> Content) {
         self.selection = .init(selection: selection)
         self.content = content()
+        self.tabBarStyle = .init(barStyle: DefaultTabBarStyle())
         self._items = .init(initialValue: .init())
     }
     
@@ -64,10 +66,13 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .environmentObject(self.selection)
             GeometryReader { geometry in
-                VStack {
+                VStack(spacing: 0) {
                     Spacer()
-                    tabItems
+                    self.tabBarStyle.tabBar(with: geometry) {
+                        .init(self.tabItems)
+                    }
                 }
+                .edgesIgnoringSafeArea(.bottom)
             }
         }
         .onPreferenceChange(TabBarPreferenceKey.self) { value in
@@ -76,3 +81,15 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
     }
     
 }
+
+extension SuperTabBar {
+
+    public func tabBarStyle<BarStyle: TabBarStyle>(_ style: BarStyle) -> Self {
+        var _self = self
+        _self.tabBarStyle = .init(barStyle: style)
+        return _self
+    }
+    
+}
+
+
