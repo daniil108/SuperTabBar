@@ -14,7 +14,7 @@ public struct DefaultTabBarStyle: TabBarStyle {
             Divider()
             VStack {
                 itemsView()
-                    .frame(height: 44)
+                    .frame(height: 50)
                     .padding(.bottom, geometry.safeAreaInsets.bottom)
             }
             .background(

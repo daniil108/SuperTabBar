@@ -22,8 +22,9 @@ struct LearnView: View {
                 }
                 Spacer()
                 Button(action: {}, label: {
-                    Text("Button")
+                    Text("Save")
                 })
+                Spacer(minLength: 70)// Height of tab bar)
             }
                 .tabItem(for: LearnTab.cards)
             Text("Learn")
