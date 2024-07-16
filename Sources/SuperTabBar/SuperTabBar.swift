@@ -75,6 +75,7 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
                 }
                 .edgesIgnoringSafeArea(.bottom)
             }
+            .ignoresSafeArea(.keyboard, edges: .bottom)
         }
         .onPreferenceChange(TabBarPreferenceKey.self) { value in
             self.items = value

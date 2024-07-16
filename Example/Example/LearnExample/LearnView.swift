@@ -11,10 +11,20 @@ import SuperTabBar
 struct LearnView: View {
     
     @State private var selectedTab = LearnTab.cards
+    @State private var text = ""
     
     var body: some View {
         SuperTabBar(selection: $selectedTab) {
-            Text("Cards")
+            VStack {
+                Form {
+                    Text("Cards")
+                    TextField("Text", text:  $text)
+                }
+                Spacer()
+                Button(action: {}, label: {
+                    Text("Button")
+                })
+            }
                 .tabItem(for: LearnTab.cards)
             Text("Learn")
                 .tabItem(for: LearnTab.learn)
