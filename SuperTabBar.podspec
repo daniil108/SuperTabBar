@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.license                 = { :type => "MIT", :file => "LICENSE" }
   s.source                  = { :git => 'https://github.com/daniil108/SuperTabBar.git', :tag => s.version.to_s }
   s.source_files            = "Sources/SuperTabBar/**/*.{swift}"
-  s.ios.deployment_target   = '13.0'
+  s.ios.deployment_target   = '14.0'
   s.swift_version           = '5.10'
 end
