@@ -22,6 +22,11 @@ struct ExampleList: View {
                 } label: {
                     Text("Learn view")
                 }
+                NavigationLink {
+                    ActiveButtonView()
+                } label: {
+                    Text("Active button view")
+                }
             }
             .navigationTitle("Super TabBar Demo")
         }
