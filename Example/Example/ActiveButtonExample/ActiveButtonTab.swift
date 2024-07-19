@@ -65,10 +65,6 @@ extension ActiveButtonTab: SuperTab {
         }
     }
     
-    var displayTitleSelected: Bool {
-        false
-    }
-    
     var customTabView: AnyView? {
         if self == .camera {
             AnyView(

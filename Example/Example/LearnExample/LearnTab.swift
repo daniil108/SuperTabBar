@@ -58,10 +58,6 @@ extension LearnTab: SuperTab {
         }
     }
     
-    var displayTitleSelected: Bool {
-        false
-    }
-    
     var customTabView: AnyView? {
         AnyView(
             VStack {

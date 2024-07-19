@@ -51,10 +51,6 @@ extension DefaultTab: SuperTab {
         }
     }
     
-    var displayTitleSelected: Bool {
-        true
-    }
-    
     var customTabView: AnyView? {
         nil
     }
