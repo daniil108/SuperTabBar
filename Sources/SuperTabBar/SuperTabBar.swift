@@ -47,7 +47,7 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
                     }
                 } else {
                     VStack(spacing: 5) {
-                        Image(systemName: self.selection.selection == item ? item.selectedIcon : item.icon)
+                        Image(self.selection.selection == item ? item.selectedIcon : item.icon)
                         Text(item.title)
                     }
                     .foregroundColor(self.selection.selection == item ? .accentColor : .gray)

@@ -20,11 +20,7 @@ struct LearnView: View {
                     Text("Cards")
                     TextField("Text", text:  $text)
                 }
-                Spacer()
-                Button(action: {}, label: {
-                    Text("Save")
-                })
-                Spacer(minLength: 70)// Height of tab bar)
+                Spacer(minLength: 70)// Height of the tab bar
             }
                 .tabItem(for: LearnTab.cards)
             Text("Learn")

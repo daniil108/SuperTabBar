@@ -21,22 +21,22 @@ extension DefaultTab: SuperTab {
     var icon: String {
         switch self {
         case .first:
-            return "folder"
+            return "folder_unselected"
         case .second:
-            return "paperplane"
+            return "paperplane_unselected"
         case .third:
-            return "trash"
+            return "trash_unselected"
         }
     }
     
     var selectedIcon: String {
         switch self {
         case .first:
-            return "folder.fill"
+            return "folder_selected"
         case .second:
-            return "paperplane.fill"
+            return "paperplane_selected"
         case .third:
-            return "trash.fill"
+            return "trash_selected"
         }
     }
     
