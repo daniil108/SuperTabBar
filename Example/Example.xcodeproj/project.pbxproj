@@ -15,6 +15,9 @@
 		70697E602C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697E5F2C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift */; };
 		70697E622C4B04DC003C8B51 /* ActiveButtonTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697E612C4B04DC003C8B51 /* ActiveButtonTab.swift */; };
 		70697E642C4B1030003C8B51 /* FullScreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697E632C4B1030003C8B51 /* FullScreenModalView.swift */; };
+		706D420D2C4EC52900539F81 /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D420C2C4EC52900539F81 /* FloatingView.swift */; };
+		706D420F2C4EC53400539F81 /* FloatingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D420E2C4EC53400539F81 /* FloatingTab.swift */; };
+		706D42112C4EC77A00539F81 /* FloatingTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D42102C4EC77A00539F81 /* FloatingTabBarStyle.swift */; };
 		70B66A342C45B0A800148C03 /* LearnTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A332C45B0A800148C03 /* LearnTabBarStyle.swift */; };
 		70B66A3F2C45B2AE00148C03 /* LearnTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A3E2C45B2AE00148C03 /* LearnTab.swift */; };
 		70B66A422C45B55C00148C03 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B66A412C45B55C00148C03 /* DefaultView.swift */; };
@@ -34,6 +37,9 @@
 		70697E5F2C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonTabBarStyle.swift; sourceTree = "<group>"; };
 		70697E612C4B04DC003C8B51 /* ActiveButtonTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonTab.swift; sourceTree = "<group>"; };
 		70697E632C4B1030003C8B51 /* FullScreenModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModalView.swift; sourceTree = "<group>"; };
+		706D420C2C4EC52900539F81 /* FloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
+		706D420E2C4EC53400539F81 /* FloatingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTab.swift; sourceTree = "<group>"; };
+		706D42102C4EC77A00539F81 /* FloatingTabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBarStyle.swift; sourceTree = "<group>"; };
 		70B66A332C45B0A800148C03 /* LearnTabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTabBarStyle.swift; sourceTree = "<group>"; };
 		70B66A3E2C45B2AE00148C03 /* LearnTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTab.swift; sourceTree = "<group>"; };
 		70B66A412C45B55C00148C03 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 				70B66A402C45B54000148C03 /* DefaultExample */,
 				70B66A3D2C45B25F00148C03 /* LearnExample */,
 				70697E5C2C4B0475003C8B51 /* ActiveButtonExample */,
+				706D420B2C4EC50D00539F81 /* FloatingExample */,
 				700BE7C62B98FD3E00C8DDAD /* ExampleApp.swift */,
 				70B66A432C45B6AF00148C03 /* ExampleList.swift */,
 				700BE7CA2B98FD4000C8DDAD /* Assets.xcassets */,
@@ -103,6 +110,16 @@
 				70697E632C4B1030003C8B51 /* FullScreenModalView.swift */,
 			);
 			path = ActiveButtonExample;
+			sourceTree = "<group>";
+		};
+		706D420B2C4EC50D00539F81 /* FloatingExample */ = {
+			isa = PBXGroup;
+			children = (
+				706D420C2C4EC52900539F81 /* FloatingView.swift */,
+				706D420E2C4EC53400539F81 /* FloatingTab.swift */,
+				706D42102C4EC77A00539F81 /* FloatingTabBarStyle.swift */,
+			);
+			path = FloatingExample;
 			sourceTree = "<group>";
 		};
 		70B66A3D2C45B25F00148C03 /* LearnExample */ = {
@@ -206,9 +223,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				70697E602C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift in Sources */,
+				706D42112C4EC77A00539F81 /* FloatingTabBarStyle.swift in Sources */,
 				70697E642C4B1030003C8B51 /* FullScreenModalView.swift in Sources */,
 				70B66A342C45B0A800148C03 /* LearnTabBarStyle.swift in Sources */,
+				706D420F2C4EC53400539F81 /* FloatingTab.swift in Sources */,
 				700BE7C92B98FD3E00C8DDAD /* LearnView.swift in Sources */,
+				706D420D2C4EC52900539F81 /* FloatingView.swift in Sources */,
 				700BE7C72B98FD3E00C8DDAD /* ExampleApp.swift in Sources */,
 				70B66A462C45B76100148C03 /* DefaultTab.swift in Sources */,
 				70B66A3F2C45B2AE00148C03 /* LearnTab.swift in Sources */,
