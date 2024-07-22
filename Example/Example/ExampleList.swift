@@ -15,17 +15,22 @@ struct ExampleList: View {
                 NavigationLink {
                     DefaultView()
                 } label: {
-                    Text("Default view")
+                    Text("Default tab bar")
                 }
                 NavigationLink {
                     LearnView()
                 } label: {
-                    Text("Learn view")
+                    Text("Learn tab bar")
                 }
                 NavigationLink {
                     ActiveButtonView()
                 } label: {
-                    Text("Active button view")
+                    Text("Tab bar with active button")
+                }
+                NavigationLink {
+                    FloatingView()
+                } label: {
+                    Text("Floating tab bar")
                 }
             }
             .navigationTitle("Super TabBar Demo")
