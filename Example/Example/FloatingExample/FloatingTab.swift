@@ -8,9 +8,9 @@
 import SwiftUI
 import SuperTabBar
 
-enum FloatingTab: Int, CaseIterable {
+enum FloatingTab {
     
-    case car = 0
+    case car
     case boat
     case truck
     

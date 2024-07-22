@@ -8,9 +8,9 @@
 import SwiftUI
 import SuperTabBar
 
-enum DefaultTab: Int, CaseIterable {
+enum DefaultTab {
     
-    case first = 0
+    case first
     case second
     case third
     

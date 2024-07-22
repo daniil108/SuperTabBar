@@ -8,9 +8,9 @@
 import SwiftUI
 import SuperTabBar
 
-enum ActiveButtonTab: Int, CaseIterable {
+enum ActiveButtonTab {
     
-    case news = 0
+    case news
     case message
     case camera
     case game

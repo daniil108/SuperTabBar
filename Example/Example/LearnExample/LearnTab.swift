@@ -8,9 +8,9 @@
 import SwiftUI
 import SuperTabBar
 
-enum LearnTab: Int, CaseIterable {
+enum LearnTab {
     
-    case cards = 0
+    case cards
     case learn
     case results
     case menu
