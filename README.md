@@ -4,10 +4,10 @@ Highly customizable SwiftUI TabBar, which allows you to create both simple tabba
 
 ## Examples
 
-![](https://github.com/daniil108/SuperTabBar/blob/main/gifs/default.gif)
-![](https://github.com/daniil108/SuperTabBar/blob/main/gifs/learn.gif)
-![](https://github.com/daniil108/SuperTabBar/blob/main/gifs/active_button.gif)
-![](https://github.com/daniil108/SuperTabBar/blob/main/gifs/floating.gif)
+<img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/default.gif" width="300"/>
+<img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/learn.gif" width="300"/>
+<img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/active_button.gif" width="300"/>
+<img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/floating.gif" width="300"/>
 
 ## Installation
 
