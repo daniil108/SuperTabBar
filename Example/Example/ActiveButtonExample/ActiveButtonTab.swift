@@ -73,7 +73,7 @@ extension ActiveButtonTab: SuperTab {
         } else {
             AnyView(
                 VStack {
-                    Image(selectedIcon)
+                    Image(icon)
                     Text(title)
                 }
                 .foregroundColor(.white.opacity(0.7))

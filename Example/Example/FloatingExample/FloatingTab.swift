@@ -23,7 +23,7 @@ extension FloatingTab: SuperTab {
         case .car:
             return "car_unselected"
         case .boat:
-            return "boate_unselected"
+            return "boat_unselected"
         case .truck:
             return "truck_unselected"
         }
@@ -47,7 +47,7 @@ extension FloatingTab: SuperTab {
     var customTabView: AnyView? {
         AnyView(
             VStack {
-                Image(selectedIcon)
+                Image(icon)
             }
             .foregroundColor(.white)
         )
