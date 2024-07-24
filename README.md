@@ -2,6 +2,11 @@
 
 Highly customizable SwiftUI TabBar, which allows you to create both simple tabbars and non-standard ones with a unique design.
 
+[![Version](https://img.shields.io/cocoapods/v/SuperTabBar.svg?style=flat)](https://cocoapods.org/pods/SuperTabBar)
+[![License](https://img.shields.io/cocoapods/l/SuperTabBar.svg?style=flat)](https://cocoapods.org/pods/SuperTabBar)
+[![Platform](https://img.shields.io/cocoapods/p/SuperTabBar.svg?style=flat)](https://cocoapods.org/pods/SuperTabBar)
+[![Swift Version][swift-image]][swift-url]
+
 ## Demo
 
 <img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/default.gif" width="300"/>
@@ -74,4 +79,5 @@ struct MyView: View {
 
 Any contribution is more than welcome! You can contribute through pull requests and issues on GitHub.
 
-
+[swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
+[swift-url]: https://swift.org/
