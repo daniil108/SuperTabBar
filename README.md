@@ -9,6 +9,11 @@ Highly customizable SwiftUI TabBar, which allows you to create both simple tabba
 <img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/active_button.gif" width="300"/>
 <img src="https://github.com/daniil108/SuperTabBar/blob/main/gifs/floating.gif" width="300"/>
 
+## Requirements
+
+- SwiftUI
+- iOS 14.0 or above
+
 ## Installation
 
 ### SPM
