@@ -48,10 +48,8 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
                     } else {
                         customTabView
                             .onTapGesture {
-                                withAnimation(animation) {
-                                    self.selection.selection = item
-                                    self.selection.objectWillChange.send()
-                                }
+                                self.selection.selection = item
+                                self.selection.objectWillChange.send()
                             }
                     }
                 } else {
@@ -82,13 +80,11 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
                     self.tabBarStyle.tabBar(with: geometry) {
                         .init(self.tabItems)
                     }
+                    .animation(animation, value: self.selection.selection)
                 }
                 .edgesIgnoringSafeArea(.bottom)
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
-        }
-        .transaction { transaction in
-            transaction.animation = nil
         }
         .onPreferenceChange(TabBarPreferenceKey.self) { value in
             self.items = value
