@@ -58,7 +58,7 @@ extension LearnTab: SuperTab {
         }
     }
     
-    var customTabView: AnyView? {
+    func customTabView(namespace: Namespace.ID) -> AnyView? {
         AnyView(
             VStack {
                 Image(icon)
@@ -67,7 +67,7 @@ extension LearnTab: SuperTab {
         )
     }
     
-    var customSelectedTabView: AnyView? {
+    func customSelectedTabView(namespace: Namespace.ID) -> AnyView? {
         AnyView(
             ZStack {
                 GeometryReader { geometry in
@@ -78,6 +78,7 @@ extension LearnTab: SuperTab {
                                              width: geometry.size.width / 2,
                                              height: 400))
                             .fill(.white)
+                            .matchedGeometryEffect(id: "learning_tab", in: namespace)
                     }
                     RoundedRectangle(cornerRadius: 20)
                         .path(in: CGRect(x: 0,
@@ -86,6 +87,7 @@ extension LearnTab: SuperTab {
                                          height: 400))
                         .fill(.white)
                         .foregroundStyle(.background)
+                        .matchedGeometryEffect(id: "learning_tab", in: namespace)
                 }
                 VStack {
                     Image(selectedIcon)

@@ -44,7 +44,7 @@ extension FloatingTab: SuperTab {
         ""
     }
     
-    var customTabView: AnyView? {
+    func customTabView(namespace: Namespace.ID) -> AnyView? {
         AnyView(
             VStack {
                 Image(icon)
@@ -53,7 +53,7 @@ extension FloatingTab: SuperTab {
         )
     }
     
-    var customSelectedTabView: AnyView? {
+    func customSelectedTabView(namespace: Namespace.ID) -> AnyView? {
         AnyView(
             VStack {
                 Image(selectedIcon)
@@ -61,7 +61,9 @@ extension FloatingTab: SuperTab {
             .frame(width: 60, height: 60)
             .background(
                 Circle()
-                    .fill(.cyan))
+                    .fill(.cyan)
+                    .matchedGeometryEffect(id: "floating_tab", in: namespace)
+            )
             .foregroundColor(.white)
         )
     }

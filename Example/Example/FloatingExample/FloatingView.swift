@@ -14,7 +14,7 @@ struct FloatingView: View {
     @State private var selectedTab = FloatingTab.boat
     
     var body: some View {
-        SuperTabBar(selection: $selectedTab) {
+        SuperTabBar(selection: $selectedTab, animation: .spring()) {
             Text("Car")
                 .tabItem(for: FloatingTab.car)
             Text("Boat")

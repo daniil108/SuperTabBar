@@ -20,19 +20,19 @@ public protocol SuperTab: Hashable {
     var title: String { get }
     
     /// A custom view for the tab item.
-    var customTabView: AnyView? { get }
+    func customTabView(namespace: Namespace.ID) -> AnyView?
     
     /// A custom view for the tab item when it is selected.
-    var customSelectedTabView: AnyView? { get }
+    func customSelectedTabView(namespace: Namespace.ID) -> AnyView?
     
 }
 
 public extension SuperTab {
     
     /// The default custom view for the tab item, which is `nil`.
-    var customTabView: AnyView? { nil }
+    func customTabView(namespace: Namespace.ID) -> AnyView? { nil }
     
     /// The default custom view for the tab item when it is selected, which is `nil`.
-    var customSelectedTabView: AnyView? { nil }
+    func customSelectedTabView(namespace: Namespace.ID) -> AnyView? { nil }
     
 }

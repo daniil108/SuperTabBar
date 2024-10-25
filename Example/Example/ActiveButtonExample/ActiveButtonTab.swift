@@ -65,7 +65,7 @@ extension ActiveButtonTab: SuperTab {
         }
     }
     
-    var customTabView: AnyView? {
+    func customTabView(namespace: Namespace.ID) -> AnyView? {
         if self == .camera {
             AnyView(
                 ZStack {}
@@ -81,7 +81,7 @@ extension ActiveButtonTab: SuperTab {
         }
     }
     
-    var customSelectedTabView: AnyView? {
+    func customSelectedTabView(namespace: Namespace.ID) -> AnyView? {
         AnyView(
             VStack {
                 Image(selectedIcon)

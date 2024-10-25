@@ -14,7 +14,7 @@ struct LearnView: View {
     @State private var text = ""
     
     var body: some View {
-        SuperTabBar(selection: $selectedTab) {
+        SuperTabBar(selection: $selectedTab, animation: .spring(duration: 0.1)) {
             VStack {
                 Form {
                     Text("Cards")

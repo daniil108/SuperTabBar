@@ -51,11 +51,11 @@ extension DefaultTab: SuperTab {
         }
     }
     
-    var customTabView: AnyView? {
+    func customTabView(namespace: Namespace.ID) -> AnyView? {
         nil
     }
     
-    var customSelectedTabView: AnyView? {
+    func customSelectedTabView(namespace: Namespace.ID) -> AnyView? {
         nil
     }
     

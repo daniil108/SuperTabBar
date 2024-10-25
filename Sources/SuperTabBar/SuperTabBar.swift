@@ -18,14 +18,20 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
     private(set) var tabBarStyle: AnyTabBarStyle
     /// The items in the tab bar.
     @State private var items: [Item]
+    /// The namespace of the tab bar
+    @Namespace private var namespace
+    /// The animation for tab selection
+    private let animation: Animation?
     
     /// Initializes a new instance of `SuperTabBar` with a binding to the selected item and a content view builder.
     /// - Parameters:
     ///   - selection: A binding to the selected item.
     ///   - content: A view builder that creates the content view.
     public init(selection: Binding<Item>,
+                animation: Animation? = nil,
                 @ViewBuilder content: () -> Content) {
         self.selection = .init(selection: selection)
+        self.animation = animation
         self.content = content()
         self.tabBarStyle = .init(barStyle: DefaultTabBarStyle())
         self._items = .init(initialValue: .init())
@@ -35,15 +41,17 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
     private var tabItems: some View {
         HStack(spacing: 0) {
             ForEach(self.items, id: \.self) { item in
-                if let customTabView = item.customTabView,
-                   let customSelectedTabView = item.customSelectedTabView {
+                if let customTabView = item.customTabView(namespace: namespace),
+                   let customSelectedTabView = item.customSelectedTabView(namespace: namespace) {
                     if self.selection.selection == item {
                         customSelectedTabView
                     } else {
                         customTabView
                             .onTapGesture {
-                                self.selection.selection = item
-                                self.selection.objectWillChange.send()
+                                withAnimation(animation) {
+                                    self.selection.selection = item
+                                    self.selection.objectWillChange.send()
+                                }
                             }
                     }
                 } else {
@@ -78,6 +86,9 @@ public struct SuperTabBar<Item: SuperTab, Content: View>: View {
                 .edgesIgnoringSafeArea(.bottom)
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
+        }
+        .transaction { transaction in
+            transaction.animation = nil
         }
         .onPreferenceChange(TabBarPreferenceKey.self) { value in
             self.items = value
