@@ -11,6 +11,7 @@
 		700BE7C92B98FD3E00C8DDAD /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BE7C82B98FD3E00C8DDAD /* LearnView.swift */; };
 		700BE7CB2B98FD4000C8DDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BE7CA2B98FD4000C8DDAD /* Assets.xcassets */; };
 		700BE7CF2B98FD4000C8DDAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BE7CE2B98FD4000C8DDAD /* Preview Assets.xcassets */; };
+		705DFF5E2CCBD69A003B6C2A /* ActiveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DFF5D2CCBD69A003B6C2A /* ActiveShape.swift */; };
 		70697E5E2C4B0491003C8B51 /* ActiveButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697E5D2C4B0491003C8B51 /* ActiveButtonView.swift */; };
 		70697E602C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697E5F2C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift */; };
 		70697E622C4B04DC003C8B51 /* ActiveButtonTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70697E612C4B04DC003C8B51 /* ActiveButtonTab.swift */; };
@@ -33,6 +34,7 @@
 		700BE7CA2B98FD4000C8DDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700BE7CC2B98FD4000C8DDAD /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		700BE7CE2B98FD4000C8DDAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		705DFF5D2CCBD69A003B6C2A /* ActiveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveShape.swift; sourceTree = "<group>"; };
 		70697E5D2C4B0491003C8B51 /* ActiveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonView.swift; sourceTree = "<group>"; };
 		70697E5F2C4B04B9003C8B51 /* ActiveButtonTabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonTabBarStyle.swift; sourceTree = "<group>"; };
 		70697E612C4B04DC003C8B51 /* ActiveButtonTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonTab.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				70697E5D2C4B0491003C8B51 /* ActiveButtonView.swift */,
 				70697E612C4B04DC003C8B51 /* ActiveButtonTab.swift */,
 				70697E632C4B1030003C8B51 /* FullScreenModalView.swift */,
+				705DFF5D2CCBD69A003B6C2A /* ActiveShape.swift */,
 			);
 			path = ActiveButtonExample;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				70B66A462C45B76100148C03 /* DefaultTab.swift in Sources */,
 				70B66A3F2C45B2AE00148C03 /* LearnTab.swift in Sources */,
 				70697E5E2C4B0491003C8B51 /* ActiveButtonView.swift in Sources */,
+				705DFF5E2CCBD69A003B6C2A /* ActiveShape.swift in Sources */,
 				70697E622C4B04DC003C8B51 /* ActiveButtonTab.swift in Sources */,
 				70B66A422C45B55C00148C03 /* DefaultView.swift in Sources */,
 				70B66A442C45B6AF00148C03 /* ExampleList.swift in Sources */,
